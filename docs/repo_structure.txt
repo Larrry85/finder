@@ -1,0 +1,173 @@
+.
+├── backend
+│   ├── database
+│   │   ├── config.go
+│   │   ├── database.go
+│   │   ├── models
+│   │   │   └── users.go
+│   │   ├── seeder.go
+│   │   └── user.sql
+│   ├── go.mod
+│   ├── go.sum
+│   ├── gqlgen.yml
+│   ├── main.go
+
+│   ├── graph/
+│   │   └── generated/
+│   │       ├── generated.go
+│   │   ├──  model/
+│   │       ├── models_gen.go
+│   │   ├── resolver.go
+│   │   ├── schema.graphql
+│   │   ├── schema.resolvers.go
+
+│   ├── internal
+│   │   └── api
+│   │       ├── handlers
+│   │       │   ├── buddyProfile.go
+│   │       │   ├── chat.go
+│   │       │   ├── cities.go
+│   │       │   ├── hashPassword.go
+│   │       │   ├── home.go
+│   │       │   ├── login.go
+│   │       │   ├── me.go
+│   │       │   ├── onlineStatus.go
+│   │       │   ├── percent.go
+│   │       │   ├── profile.go
+│   │       │   ├── recommendations.go
+│   │       │   ├── register.go
+│   │       │   ├── requests.go
+│   │       │   ├── resetPassword.go
+│   │       │   ├── searchSettings.go
+│   │       │   ├── taskbuddy.go
+│   │       │   ├── userData.go
+│   │       │   └── userHandlers.go
+│   │       └── middleware
+│   │           └── middleware.go
+│   ├── main.go
+│   └── uploads/
+
+
+
+
+├── docs/
+│   ├── endpoint_responses.md
+│   ├── matching.md
+│   ├── repo_structure.txt
+│   ├── requirements.md
+│   ├── whatdidido.txt
+
+
+
+├── frontend
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── node_modules/
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.js
+│   ├── public
+│   │   ├── images
+│   │   │   └── avatar.png
+│   │   └── vite.svg
+│   ├── README.md
+│   ├── src
+│   │   ├── App.tsx
+│   │   ├── components
+│   │   │   ├── Auth
+│   │   │   │   ├── Button.tsx
+│   │   │   │   └── Input.tsx
+│   │   │   ├── BuddyProfile
+│   │   │   │   ├── BuddyHeader.tsx
+│   │   │   │   ├── BuddyLoadingCard.tsx
+│   │   │   │   ├── BuddyNotFound.tsx
+│   │   │   │   ├── BuddyProfileInfo.tsx
+│   │   │   │   ├── InfoRow.tsx
+│   │   │   │   ├── InterestTag.tsx
+│   │   │   │   ├── types.ts
+│   │   │   │   └── UserAvatar.tsx
+│   │   │   ├── Chat
+│   │   │   │   ├── ChatInterface.tsx
+│   │   │   │   ├── messageUtils.ts
+│   │   │   │   └── MessengerPanel.tsx
+│   │   │   ├── Home
+│   │   │   │   ├── DashboardContent.tsx
+│   │   │   │   ├── DashboardStats.tsx
+│   │   │   │   ├── LoadingSpinner.tsx
+│   │   │   │   ├── types.ts
+│   │   │   │   └── WelcomeHeaderProps.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── Profile
+│   │   │   │   ├── ActionButtons.tsx
+│   │   │   │   ├── FormField.tsx
+│   │   │   │   ├── InfoRow.tsx
+│   │   │   │   ├── InterestsSection.tsx
+│   │   │   │   ├── InterestTag.tsx
+│   │   │   │   ├── MeAvatar.tsx
+│   │   │   │   ├── Mecard.tsx
+│   │   │   │   ├── MeHeader.tsx
+│   │   │   │   ├── MeInfoRow.tsx
+│   │   │   │   ├── ProfileCard.tsx
+│   │   │   │   ├── ProfileHeader.tsx
+│   │   │   │   ├── ProfilePhoto.tsx
+│   │   │   │   ├── ProjectSelection.tsx
+│   │   │   │   └── types.ts
+│   │   │   ├── Recommendation
+│   │   │   │   ├── InfoRow.tsx
+│   │   │   │   ├── InterestTag.tsx
+│   │   │   │   ├── LoadingSpinner.tsx
+│   │   │   │   ├── PageHeader.tsx
+│   │   │   │   ├── RecomAvatar.tsx
+│   │   │   │   ├── RecommendationCard.tsx
+│   │   │   │   ├── RecommendationsGrid.tsx
+│   │   │   │   ├── types.ts
+│   │   │   │   └── UserInfo.tsx
+│   │   │   ├── SearchSettings
+│   │   │   │   ├── Buttons.tsx
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── DistancePreference.tsx
+│   │   │   │   ├── EnhancedBuddySettings.tsx
+│   │   │   │   ├── ProjectsSection.tsx
+│   │   │   │   └── types.ts
+│   │   │   └── Taskbuddy
+│   │   │       ├── ActionButtons.tsx
+│   │   │       ├── InfoRow.tsx
+│   │   │       ├── InterestTag.tsx
+│   │   │       ├── LoadingSpinner.tsx
+│   │   │       ├── PageHeader.tsx
+│   │   │       ├── TaskBuddyCard.tsx
+│   │   │       ├── TaskBuddyGrid.tsx
+│   │   │       ├── types.ts
+│   │   │       ├── UserAvatar.tsx
+│   │   │       └── UserInfo.tsx
+│   │   ├── index.css
+│   │   ├── main.tsx
+│   │   ├── mock
+│   │   │   └── homeData.ts
+│   │   ├── pages
+│   │   │   ├── Auth
+│   │   │   │   ├── Auth.tsx
+│   │   │   │   ├── BuddyProfile.tsx
+│   │   │   │   ├── Home.tsx
+│   │   │   │   ├── Recommendations.tsx
+│   │   │   │   └── Taskbuddy.tsx
+│   │   │   └── Profile
+│   │   │       └── Profile.tsx
+│   │   ├── services
+│   │   │   ├── api.ts
+│   │   │   └── websocket.ts
+│   │   ├── styles
+│   │   │   └── requests.css
+│   │   └── vite-env.d.ts
+│   ├── tailwind.config.js
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+
+├── package-lock.json
+├── README.md
+
+
+
+1269 directories, 16673 files

@@ -1,0 +1,30 @@
+go install github.com/99designs/gqlgen@latest
+
+
+student@student-ThinkPad-T490s:~/match-me/backend$ nano ~/.bashrc
+student@student-ThinkPad-T490s:~/match-me/backend$ echo $PATH
+/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/student/.nvm/versions/node/v20.18.3/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/student/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/student/go/bin
+student@student-ThinkPad-T490s:~/match-me/backend$ gqlgen init
+Creating gqlgen.yml
+Creating graph/schema.graphqls
+Creating server.go
+Generating...
+go: downloading github.com/hashicorp/golang-lru/v2 v2.0.7
+go: downloading github.com/go-viper/mapstructure/v2 v2.2.1
+go: downloading github.com/stretchr/testify v1.10.0
+go: downloading github.com/PuerkitoBio/goquery v1.9.3
+go: downloading github.com/gorilla/websocket v1.5.0
+go: downloading github.com/andreyvit/diff v0.0.0-20170406064948-c7f18ee00883
+go: downloading github.com/arbovm/levenshtein v0.0.0-20160628152529-48b4e1c0c4d0
+go: downloading github.com/dgryski/trifles v0.0.0-20230903005119-f50d829f2e54
+go: downloading github.com/sergi/go-diff v1.3.1
+go: downloading github.com/andybalholm/cascadia v1.3.2
+
+Exec "go run ./server.go" to start GraphQL server
+
+
+
+export PATH=$PATH:$(go env GOPATH)/bin
+echo $PATH
+
+gqlgen init

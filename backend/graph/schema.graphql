@@ -1,0 +1,50 @@
+type User {
+  id: ID!
+  email: String!
+  firstName: String
+  lastName: String
+  profilePicture: String
+  bio: Bio
+  profile: Profile
+}
+
+type Bio {
+  id: ID!
+  user: User
+  content: String
+}
+
+type Profile {
+  id: ID!
+  user: User
+  headline: String
+  location: String
+}
+
+type Todo {
+  id: ID!
+  text: String!
+  done: Boolean!
+  user: User!
+}
+
+type Query {
+  user(id: ID!): User
+  bio(id: ID!): Bio
+  profile(id: ID!): Profile
+  me: User
+  myBio: Bio
+  myProfile: Profile
+  recommendations: [User]
+  connections: [User]
+  todos: [Todo!]!
+}
+
+input NewTodo {
+  text: String!
+  userId: String!
+}
+
+type Mutation {
+  createTodo(input: NewTodo!): Todo!
+}
